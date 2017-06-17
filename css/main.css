@@ -1,0 +1,246 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+html,
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  background-image: url("http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/tiny_grid.png");
+}
+
+h1 {
+  font-weight: lighter;
+}
+
+.container {
+  width: 320px;
+  height: 480px;
+}
+
+row {
+  height: 100%;
+}
+
+.col {
+  padding: 0 !important;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.card {
+  overflow: hidden;
+  height: 250px;
+}
+
+.btn-large {
+  text-align: center;
+  width: 100%;
+}
+
+.valign-wrapper {
+  height: 100%;
+}
+.valign-wrapper .valign {
+  margin: 0 auto;
+}
+
+.confirmation {
+  position: absolute;
+  top: 25%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  opacity: 1;
+  transition: all .4s ease-in-out;
+  z-index: 0;
+  transform: scale(1);
+}
+.confirmation h4 {
+  margin: 0;
+  padding: 0;
+  font-weight: 200;
+}
+.confirmation i {
+  font-size: 72px;
+}
+
+.confirmation.hide-confirm {
+  top: 100% !important;
+  opacity: 0 !important;
+  transform: scale(0.5);
+}
+
+.barcode {
+  position: relative;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: all 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+  position: relative;
+  transform: scale(0.8);
+  top: 0;
+}
+.barcode::before {
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  width: 220px;
+  background: red;
+  border: 1px solid red;
+  height: 95px;
+  margin: auto;
+  opacity: 0.5;
+}
+
+.scan::before {
+  width: 0 !important;
+  height: 0 !important;
+  opacity: 0;
+}
+
+.grow::before {
+  width: 250px !important;
+  height: 115px !important;
+  opacity: 0.1;
+}
+
+.green {
+  background: transparent !important;
+}
+.green .mark {
+  background: green !important;
+  border-color: transparent !important;
+}
+.green::before {
+  transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  background: #76ff03;
+  opacity: 0.7;
+  border: 1px solid #76ff03;
+}
+.green .top {
+  top: -110px;
+}
+.green .right {
+  right: -70%;
+}
+.green .bottom {
+  bottom: -110px;
+}
+.green .left {
+  left: -70%;
+}
+
+.yellow {
+  background: transparent !important;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.yellow .mark {
+  background: #ff9100 !important;
+  border-color: transparent !important;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+  opacity: 1;
+}
+.yellow::before {
+  background: #ffeb3b;
+  opacity: .6;
+  border: 1px solid transparent;
+  transition: all 0.8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.yellow .top {
+  top: -130px !important;
+}
+.yellow .right {
+  right: -79% !important;
+}
+.yellow .bottom {
+  bottom: -130px !important;
+}
+.yellow .left {
+  left: -79% !important;
+}
+
+table {
+  border-collapse: block;
+  width: 200px;
+  transition: all 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+  position: relative;
+}
+
+td {
+  width: 1px;
+  height: 75px;
+  padding: 0 !important;
+}
+
+.marker {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.marker .mark {
+  height: 10px;
+  width: 10px;
+  position: absolute;
+  border: 1px solid red;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  z-index: -1;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  background: red;
+  border-radius: 10px;
+  transform: scale(1);
+}
+.marker .center-marker {
+  top: 0 !important;
+  right: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  transform: scale(0);
+}
+.marker .top {
+  top: -110px;
+}
+.marker .top.right {
+  border-radius: 10px 10px 10px 0;
+}
+.marker .top.left {
+  border-radius: 10px 10px 0 10px;
+}
+.marker .right {
+  right: -70%;
+}
+.marker .bottom {
+  bottom: -110px;
+}
+.marker .bottom.right {
+  border-radius: 0 10px 10px 10px;
+}
+.marker .left {
+  left: -70%;
+}
+.marker .bottom.left {
+  border-radius: 10px 0 10px 10px;
+}
+
+.drop {
+  opacity: 1 !important;
+  transform: scale(1);
+}
+
+.payment-details {
+  height: 100%;
+}
+
+.sink {
+  top: 100%;
+}
