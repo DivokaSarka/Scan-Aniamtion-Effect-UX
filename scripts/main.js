@@ -28,8 +28,7 @@ $('button').click(function(e){
     .removeClass('yellow')
     .removeClass('grow')
   }else{
-    
-    // THIS IS SO BAD DONT EVER DO THIS!!!
+  
     setTimeout(function(){
     $('.barcode').toggleClass('grow yellow')
       setTimeout(function(){
